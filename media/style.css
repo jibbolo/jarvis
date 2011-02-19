@@ -5,16 +5,27 @@ html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pr
 
 body,html   {background-color:#DEF030; font-family: Trebuchet,Verdana,Arial;font-size:12px;}
 h1          {font-size:120%;color:#555;letter-spacing:1px;font-weight:normal;text-transform:uppercase;margin-bottom:5px;}
-h2          {font-size:110%;color:#555;letter-spacing:1px;font-weight:normal;text-transform:uppercase;margin-bottom:5px;}
+h2          {font-size:105%;color:#555;letter-spacing:1px;font-weight:normal;text-transform:uppercase;margin-bottom:5px;}
 a           {color:#444;}
 header      {padding-top:15px;padding-right:10px;text-align:right;}
 header h1   {color:white;font-size:200%;letter-spacing:2px;color:#888;text-shadow:2px 0px 2px #fff;text-transform:none;
              margin-bottom:0px;font-style:italic;}
 .wrapper    {width:90%;margin:auto;}
-#container  {background-color:white;padding:20px;line-height:1.2;border:10px solid #f9f9f9;
+#container  {background-color:white;padding:10px;line-height:1.2;border:10px solid #f9f9f9;
              box-shadow:0px 0px 10px #aaa;-moz-box-shadow:0px 0px 10px #aaa;-webkit-box-shadow:0px 0px 10px #aaa;}
             
 footer      {margin-top:10px; text-align:center;color:#444;}
 label       {display:block;float:left; width:100px;text-align:right;padding-top:3px;}
+
 input[type=text],[type=password]  {margin-bottom:10px;}
+
 #login      {width:300px; margin:auto;text-align:center;}
+div.eof     {clear:both;}
+aside       {float:left;width:180px;}
+section     {margin-left:190px;}
+
+#service_list           {height:500px;overflow:auto;background-color:#DBE4BE;border:1px solid #eee;}
+#service_list li {display:block;text-align:center;text-decoration:none;padding:5px;border-style:solid;border-width:1px 0px;
+                  border-color:#ddd; cursor:pointer;}
+#service_list >ul>li  {background-color:#eee; border-color:#ddd;font-weight:bold;}
+#service_list .sender_list li  {background-color:#fafafa; text-align:left;font-size:90%;overflow:hidden;border-right:3px solid #fafafa;}

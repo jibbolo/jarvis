@@ -129,7 +129,6 @@ class JabberBot(object):
             self.log.info('total contacts: %s' % len(self.roster.getItems()))
             self.conn.RegisterHandler('message', self.callback_message)
             self.conn.RegisterHandler('presence', self.callback_presence)
-            self.conn.RegisterHandler('iq', self.callback_iq)
 
         return self.conn
 
@@ -214,15 +213,11 @@ class JabberBot(object):
             if not only_available or show is self.AVAILABLE:
                 self.send(jid, message)
     
-    def callback_iq(self,*args,**kwargs):
-        print args
-        print kwargs
     def callback_presence(self, conn, presence):
         self.__lastping = time.time()
         jid, type_, show, status = presence.getFrom(), \
                 presence.getType(), presence.getShow(), \
                 presence.getStatus()
-        print jid, type_, show, status
         if self.jid.bareMatch(jid):
             # Ignore our own presence messages
             return
