@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section id="login">
+    <h1>Login</h1><br/>
+    <form accept-charset="utf-8" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <p><input type="submit" value="login"></p>
+    </form>
+</section>
+{% endblock %}

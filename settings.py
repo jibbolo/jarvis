@@ -49,3 +49,5 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'jarvis',
 )
+LOGIN_URL = "/login/"
+LOGIN_REDIRECT_URL = "/"

@@ -129,6 +129,7 @@ class JabberBot(object):
             self.log.info('total contacts: %s' % len(self.roster.getItems()))
             self.conn.RegisterHandler('message', self.callback_message)
             self.conn.RegisterHandler('presence', self.callback_presence)
+            self.conn.RegisterHandler('iq', self.callback_iq)
 
         return self.conn
 
@@ -212,13 +213,16 @@ class JabberBot(object):
         for jid, (show, status) in self.__seen.items():
             if not only_available or show is self.AVAILABLE:
                 self.send(jid, message)
-
+    
+    def callback_iq(self,*args,**kwargs):
+        print args
+        print kwargs
     def callback_presence(self, conn, presence):
         self.__lastping = time.time()
         jid, type_, show, status = presence.getFrom(), \
                 presence.getType(), presence.getShow(), \
                 presence.getStatus()
-
+        print jid, type_, show, status
         if self.jid.bareMatch(jid):
             # Ignore our own presence messages
             return
@@ -315,12 +319,6 @@ class JabberBot(object):
 
         # If a message format is not supported (eg. encrypted), txt will be None
         if not text: return
-
-        # Ignore messages from users not seen by this bot
-        if jid not in self.__seen:
-            self.log.info('Ignoring message from unseen guest: %s' % jid)
-            self.log.debug("I've seen: %s" % ["%s" % x for x in self.__seen.keys()])
-            return
 
         self.__threads[jid] = mess.getThread()
 
