@@ -1,0 +1,17 @@
+/* html5doctor.com Reset Stylesheet */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video { margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent; } body { line-height:1; } article,aside,details,figcaption,figure, footer,header,hgroup,menu,nav,section { display:block; } nav ul { list-style:none; } blockquote, q { quotes:none; } blockquote:before, blockquote:after, q:before, q:after { content:''; content:none; } a { margin:0; padding:0; font-size:100%; vertical-align:baseline; background:transparent; } /* change colours to suit your needs */ ins { background-color:#ff9; color:#000; text-decoration:none; } /* change colours to suit your needs */ mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; } del { text-decoration: line-through; } abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; } table { border-collapse:collapse; border-spacing:0; } /* change border colour to suit your needs */ hr { display:block; height:1px; border:0; border-top:1px solid #cccccc; margin:1em 0; padding:0; } input, select { vertical-align:middle; }
+
+/* Jarvis Style */
+
+body,html {background-color:#DEF030; font-family: Trebuchet,Verdana,Arial;font-size:12px;}
+h1 {font-size:120%;color:#555;letter-spacing:1px;font-weight:normal;text-transform:uppercase;margin-bottom:10px;}
+h1:first-letter {font-size:130%;}
+header {padding-top:15px;text-align:right;}
+header h1{color:white;font-size:200%;letter-spacing:2px;color:#888;text-shadow:2px 0px 2px #fff;text-transform:none;
+          margin-bottom:0px;}
+.wrapper {width:90%;margin:auto;}
+header h1:first-letter {font-size:inherit;}
+#container {background-color:white;padding:20px;line-height:1.2;border:10px solid #f9f9f9;
+            box-shadow:0px 0px 10px #aaa;-moz-box-shadow:0px 0px 10px #aaa;-webkit-box-shadow:0px 0px 10px #aaa;}
+            
+footer {margin-top:10px; text-align:center;color:#444;}

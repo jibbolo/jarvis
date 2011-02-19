@@ -1,9 +1,10 @@
 #!/usr/bin/python
+# encoding: utf-8
 """
 jarvis.py
 
 Created by Giacomo Marinangeli on 2011-02-18.
-Copyright (c) 2011 Forinicom Srl. All rights reserved.
+Copyright (c) 2011 Giacomo Marinangeli. All rights reserved.
 """
 
 import threading

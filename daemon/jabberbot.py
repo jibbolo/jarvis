@@ -1,4 +1,5 @@
 #!/usr/bin/python
+# encoding: utf-8
 
 # Based on JabberBot: A simple jabber/xmpp bot framework
 # Copyright (c) 2007-2011 Thomas Perl <thp.io/about>
