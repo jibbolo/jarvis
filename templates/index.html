@@ -10,7 +10,9 @@
                     {% if service.users.count %}
                         <ul class="sender_list">
                             {% for sender in service.users.all %}
-                                <li>{{sender}}</li>
+                                <li {% if sender.id == sender_id %}class="curr"{%endif%}>
+                                    <a href="{% url index sender.id %}">{{sender}}</a>
+                                </li>
                             {% endfor %}
                         </ul>
                     {% endif %}
@@ -19,7 +21,23 @@
         </nav>
     </aside>
     <section>
-        <h1>Message Log</h1>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <h2>Message Logs</h2>
+        <div id="message_logs">
+            {% if message_logs %}
+                {% for message in message_logs %}
+                    <div class="message">
+                        <div class="time2">
+                            {{message.date|date:"Y-m-d"}}
+                        </div>
+                        <div class="time">
+                            {{message.date|date:"H:i.s"}}
+                        </div>
+                        <div class="text">
+                            {{message.text}}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
     </section>
 {% endblock %}

@@ -16,9 +16,14 @@ class Service(models.Model):
 class Sender(models.Model):
     username = models.CharField(max_length=255,null=False,unique=True)
     service = models.ForeignKey(Service, null=False, related_name="users")
+
+    class Meta:
+        ordering = ['username',]
+            
     def __unicode__(self):
         return self.username
-        
+    
+
 class Message(models.Model):
     jid = models.CharField(max_length=255,null=False)
     date = models.DateTimeField(null=False, default=datetime.datetime.now)
@@ -26,6 +31,9 @@ class Message(models.Model):
     text = models.TextField(null=True)
     sender = models.ForeignKey(Sender, null=False, related_name="messages")
 
+    class Meta:
+        ordering = ['date',]
+        
     def __unicode__(self):
         return "[%s] %s" % (self.date, self.sender)
         

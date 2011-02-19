@@ -3,7 +3,7 @@ from django.conf.urls.defaults import *
 from jarvis import settings
 
 urlpatterns = patterns('jarvis.views',
-    url(r'^$', name="index", view="index"),
+    url(r'^(?P<sender_id>\d*)/?$', name="index", view="index"),
 )
 
 urlpatterns += patterns('', 
